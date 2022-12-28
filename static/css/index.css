@@ -27,6 +27,7 @@ form.highlight {
     margin-top: 1vh;
     align-items: stretch;
     justify-items: stretch;
+    border: 1px red solid;
 }
 
 .textareaBox {
