@@ -28,18 +28,36 @@
       background: transparent !important;
     }
 
+    * {
+      /* border: 1px dotted #fe8019; */
+    }
     body {
       /* Change background color to that of your theme's */
-      background: #0f1419;
+      background: #1d2021;
       padding: 10px;
-      color: #E6E1CF;
+      /* color: #ebdbb2; */
+      /* ovewrscroll-behavior-y: none; */
+    }
+
+    select {
+      background-color: #504945;
+      color: #ebdbb2;
     }
 
     ::selection {
       /* text selection color
              make sure to change to your your preferred color if changing the default colorscheme */
-      background: #253340;
+      background: #37372b;
+      color: #ebdbb2
     }
+    textarea {
+      background: #282828;
+    }
+    textarea::placeholder {
+      color: #ebdbb2;
+      background: #282828;
+    }
+
   </style>
   {% block styles %}
   {% endblock styles %}

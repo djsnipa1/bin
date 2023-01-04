@@ -1,3 +1,9 @@
+html,
+body {
+    overflow-y: hidden;
+    overscroll-behavior-y: none;
+}
+
 #pasteContent {
   width: max-content;
 }
@@ -9,7 +15,8 @@ span {
 
 .topRightBox {
   position: fixed;
-  padding: 18px 10px;
+  /* padding: 18px 10px; */
+  padding: 0px 10px;
   color: #f29718;
   background-color: #0f1419;
   top: 0px;
