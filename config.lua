@@ -30,9 +30,6 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 
--- -- Change theme settings
--- lvim.colorscheme = "lunar"
-
 -- After changing plugin config exit and reopen LunarVim, Run :PackerSync
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
@@ -97,6 +94,7 @@ lvim.plugins = {
   --       "folke/trouble.nvim",
   --       cmd = "TroubleToggle",
   --     },
+  { "ellisonleao/gruvbox.nvim" },
   {
     "norcalli/nvim-colorizer.lua",
     config = function()
@@ -126,3 +124,24 @@ lvim.plugins = {
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
+
+-- -- Change theme settings
+require("gruvbox").setup({
+  undercurl = true,
+  underline = true,
+  bold = true,
+  italic = true,
+  strikethrough = true,
+  invert_selection = false,
+  invert_signs = false,
+  invert_tabline = false,
+  invert_intend_guides = false,
+  inverse = true, -- invert background for search, diffs, statuslines and errors
+  contrast = "hard", -- can be "hard", "soft" or empty string
+  palette_overrides = {},
+  overrides = {},
+  dim_inactive = false,
+  transparent_mode = false,
+})
+-- vim.cmd("colorscheme gruvbox")
+lvim.colorscheme = "gruvbox"

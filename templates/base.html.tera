@@ -16,6 +16,9 @@
 
   <link href="/static/fonts/iosevka.css" rel="stylesheet" />
 
+  <script src="https://cdn.lr-in-prod.com/LogRocket.min.js" crossorigin="anonymous"></script>
+  <script>window.LogRocket && window.LogRocket.init('xyivii/test');</script>
+
   <title>{{ title }}</title>
 
   <style>
@@ -31,6 +34,7 @@
     * {
       /* border: 1px dotted #fe8019; */
     }
+
     body {
       /* Change background color to that of your theme's */
       background: #1d2021;
@@ -50,14 +54,15 @@
       background: #37372b;
       color: #ebdbb2
     }
+
     textarea {
       background: #282828;
     }
+
     textarea::placeholder {
       color: #ebdbb2;
       background: #282828;
     }
-
   </style>
   {% block styles %}
   {% endblock styles %}
