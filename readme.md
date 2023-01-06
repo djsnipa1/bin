@@ -6,7 +6,7 @@ It does not require you to host a SQL server and everything is self-contained in
 a statically linked binary (the docker image runs on scratch !), which makes it
 extremely easy to deploy.
 
-Try it out on: https://basedbin.fly.dev
+Try it out on: https://bin.djsnipa1.repl.co
 
 ## Clients
 
@@ -31,7 +31,7 @@ You can paste
 Get the client from [this repository](contrib/cli/client) or from my deployed paste:
 
 ```bash
-curl -o pst https://bin.wantguns.dev/client
+curl -o pst https://bin.djsnipa1.repl.co/client
 chmod +x pst
 ```
 
@@ -41,7 +41,7 @@ or manually copy the following at a file in your path.
 #!/bin/bash
 
 # Change the url accordingly
-URL="https://basedbin.fly.dev"
+URL="https://bin.djsnipa1.repl.co
 
 FILEPATH="$1"
 FILENAME=$(basename -- "$FILEPATH")
@@ -93,13 +93,13 @@ Currently, builds for the following target triples are shipped:
 The builds shipped are statically linked, so you don't even need a libc to run
 the binary !  
 The docker manifest labelled
-[`wantguns/bin:latest`](https://hub.docker.com/layers/wantguns/bin/latest/images/sha256-34c19b59d098bd1420fc48f6b1f01dc250d3d8787a3786f5425efb4e74cc17f2?context=repo)
+[`djsnipa1/bin:latest`](https://hub.docker.com/layers/djsnipa1/bin/latest/images/sha256-34c19b59d098bd1420fc48f6b1f01dc250d3d8787a3786f5425efb4e74cc17f2?context=repo)
 includes the images for both amd64 and arm64 images.
 
 ### Docker
 
 ```bash
-$ docker run -p 6162:6162 wantguns/bin
+$ docker run -p 6162:6162 djsnipa1/bin
 ```
 
 ### Docker Compose
@@ -108,7 +108,7 @@ $ docker run -p 6162:6162 wantguns/bin
 version: '3.3'
 services:
   pastebin:
-    image: wantguns/bin
+    image: djsnipa1/bin
     container_name: pastebin
     ports:
       - 127.0.0.1:6163:6163
@@ -194,7 +194,7 @@ BIN_IDENT=false
 `GET /p/<id>.<ext> `  
 
   Get syntax highlighted pastes.  
-  E.g. https://basedbin.fly.dev/p/foobaz.cpp should return a C++ syntax
+  E.g. https://bin.djsnipa1.repl.co/p/foobaz.cpp should return a C++ syntax
   highlighted paste
 
 `POST /`  
