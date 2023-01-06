@@ -22,4 +22,6 @@ echo "Preparing Packer setup"
 	-c 'autocmd User PackerComplete quitall' \
 	-c 'PackerSync'
 
-echo "Custom setup complete"
+echo "lunarvim setup complete"
+
+nix-env -i lazygit lf 
