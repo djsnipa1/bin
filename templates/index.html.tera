@@ -4,7 +4,13 @@
 <form action="/submit" method="post" ondrop="dropHandler(event)">
     <div class="grid_form">
         <div class="textareaBox">
-            <textarea name="content" id="textarea_content" style="resize: none" placeholder="BIN                               bin(3)
+            <textarea name="content" id="textarea_content" style="resize: none" placeholder="
+b)      ##         
+b)                 
+b)BBBB  i) n)NNNN  
+b)   BB i) n)   NN 
+b)   BB i) n)   NN 
+b)BBBB  i) n)   NN 
 
 NAME
        bin - A highly opinionated and minimalistic Pastebin
