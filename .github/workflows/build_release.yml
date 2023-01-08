@@ -14,7 +14,7 @@ jobs:
       - uses: taiki-e/create-gh-release-action@v1
         #with:
           # (optional)
-          #changelog: CHANGELOG.md
+          # changelog: CHANGELOG.md
         env:
           # (required)
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -22,10 +22,10 @@ jobs:
   upload-assets:
     strategy:
       matrix:
-        os:
+        os: 
           - ubuntu-latest
           - macos-latest
-          - windows-latest
+          # - windows-latest
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
