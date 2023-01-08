@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "setting up lunarvim"
+
 declare -xr INSTALL_PREFIX="${INSTALL_PREFIX:-"$HOME/.local"}"
 declare -xr XDG_DATA_HOME="${XDG_DATA_HOME:-"$HOME/.local/share"}"
 declare -xr XDG_CACHE_HOME="${XDG_CACHE_HOME:-"$HOME/.cache"}"
@@ -23,5 +25,9 @@ echo "Preparing Packer setup"
 	-c 'PackerSync'
 
 echo "lunarvim setup complete"
+echo "-----------------------"
+echo "installing nix pachages"
 
-nix-env -i lazygit lf 
+nix-env -i lazygit lf figlet lolcat
+
+figlet FINSHED! | lolcal -a -d 3
