@@ -30,4 +30,4 @@ echo "installing nix pachages"
 
 nix-env -i lazygit lf figlet lolcat
 
-figlet FINSHED! | lolcal -a -d 3
+figlet FINSHED! | lolcat -a -d 3
