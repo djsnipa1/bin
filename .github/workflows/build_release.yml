@@ -12,8 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: taiki-e/create-gh-release-action@v1
-        with:
-          token: ${{ secrets.GH_TOKEN }}
+        # with:
           # (optional)
           # changelog: CHANGELOG.md
         env:
