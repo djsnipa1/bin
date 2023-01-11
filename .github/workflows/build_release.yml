@@ -19,6 +19,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           WITH_V: true
+          INITIAL_VERSION: 3.11.0
         id: bump_version
       - name: Upload binary to release
         uses: svenstaro/upload-release-action@v1-release
