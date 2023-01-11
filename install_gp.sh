@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+echo "installing nix packages"
+
+nix-env -i lazygit lf figlet lolcat
+echo "-----------------------"
 echo "setting up lunarvim"
 
 declare -xr INSTALL_PREFIX="${INSTALL_PREFIX:-"$HOME/.local"}"
@@ -25,9 +29,5 @@ echo "Preparing Packer setup"
 	-c 'PackerSync'
 
 echo "lunarvim setup complete"
-echo "-----------------------"
-echo "installing nix pachages"
-
-nix-env -i lazygit lf figlet lolcat
 
 figlet FINSHED! | lolcat -a -d 3
